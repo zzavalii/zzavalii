@@ -122,22 +122,32 @@ h1.mikey {
   margin-top: 2rem;
 }
 
+.fab{
+  font-size: 3rem;
+}
+
 .all {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
+.all:hover {
+  transform: scale(1.1);
+}
+
+.all h1,
 .all i {
-  font-size: 3rem;
+  transition: color 0.3s ease;
   color: rgb(173, 226, 172);
 }
 
-.overall {
-  color: rgb(173, 226, 172);
-  font-size: 1.5rem;
-  margin: 10px 0;
+.all:hover h1,
+.all:hover i {
+  color: rgb(123, 173, 122); 
 }
 
 @media (max-width: 768px) {
