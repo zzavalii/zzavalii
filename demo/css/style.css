@@ -19,58 +19,48 @@ li{list-style:none}
 
 
 /* =============================================================================
-   My CSS
+My CSS
    ========================================================================== */
 
 /* ---- base ---- */
 
-html,body{ 
-	width:100%;
-	height:100%;
-	background:#111;
-}
+
 
 html{
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(197, 105, 105, 0);
 }
 
 body{
   font:normal 75% Arial, Helvetica, sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  background-size: cover;
 }
 
 canvas{
   display:block;
-  vertical-align:bottom;
+  z-index: 0;
 }
-
 
 /* ---- stats.js ---- */
 
-.count-particles{
-  background: #000022;
+/* .count-particles{
+  background: #0e0eaf;
   position: absolute;
   top: 48px;
   left: 0;
   width: 80px;
-  color: #13E8E9;
-  font-size: .8em;
+  color: #0fbcbc;
+  font-size: 8em;
   text-align: left;
   text-indent: 4px;
   line-height: 14px;
   padding-bottom: 2px;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
-}
+} */
 
 .js-count-particles{
   font-size: 1.1em;
-}
-
-#stats,
-.count-particles{
-  -webkit-user-select: none;
-  margin-top: 5px;
-  margin-left: 5px;
 }
 
 #stats{
@@ -82,15 +72,98 @@ canvas{
   border-radius: 0 0 3px 3px;
 }
 
-
 /* ---- particles.js container ---- */
-
-#particles-js{
+html, body {
   width: 100%;
   height: 100%;
-  background-color: #b61924;
-  background-image: url('');
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Permanent Marker', cursive, Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, rgba(23, 24, 33, 0.9), rgba(13, 14, 21, 0.8), rgba(19, 23, 38, 0.7));
   background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; 
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  height: 10%;
+  z-index: 1; 
+}
+
+h1.mikey {
+  color: rgb(173, 226, 172);
+  font-size: 4rem;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.fab{
+  font-size: 3rem;
+}
+
+.all {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.all:hover {
+  transform: scale(1.1);
+}
+
+.all h1,
+.all i {
+  transition: color 0.3s ease;
+  color: rgb(173, 226, 172);
+}
+
+.all:hover h1,
+.all:hover i {
+  color: rgb(123, 173, 122); 
+}
+
+@media (max-width: 768px) {
+  h1.mikey {
+      font-size: 2.5rem;
+  }
+
+  .row {
+      gap: 1rem;
+      flex-direction: column;
+  }
+
+  .all i {
+      font-size: 2.5rem;
+  }
+
+  .overall {
+      font-size: 1.2rem;
+  }
 }
